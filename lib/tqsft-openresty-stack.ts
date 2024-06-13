@@ -82,7 +82,7 @@ export class TqsftOpenrestyStack extends cdk.Stack {
     const ecsOpenRestyContainer = ecsOpenRestyTaskDef.addContainer(`OpenrestyContainer`, {
       image: ContainerImage.fromRegistry("bitnami/openresty"),
       cpu: 512,
-      memoryLimitMiB: 392,
+      memoryLimitMiB: 512,
       logging: openRestyLogDriver,
       containerName: "OpenResty",
     })
